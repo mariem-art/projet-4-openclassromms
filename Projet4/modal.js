@@ -95,10 +95,7 @@ function validate() {
     if (!firstName.test(first)) {
         document.getElementById("first-error-message").innerHTML = "Veuillez entrer un prénom valide.";
         return false;
-    } else if (first.trim() === "") {
-        document.getElementById("first-error-message").innerHTML = "Ce champ ne peut pas être vide.";
-        return false;
-    } else if (first.length < 2) {
+    } else if (first.trim().length < 2) {
         document.getElementById("first-error-message").innerHTML = "Veuillez entrer 2 caractères ou plus pour le champ du prénom.";
         return false;
     } else {
@@ -110,12 +107,9 @@ function validate() {
     if (!lastName.test(last)) {
         document.getElementById("last-error-message").innerHTML = "Veuillez entrer un nom valide.";
         return false;
-    } else if (last.trim() === "") {
+    } else if (lastName.trim().length < 2)  {
         document.getElementById("last-error-message").innerHTML = "Ce champ ne peut pas être vide.";
-        return false;
-    } else if (last.length < 2) {
-        document.getElementById("last-error-message").innerHTML = "Veuillez entrer 2 caractères ou plus pour le champ du nom.";
-        return false;
+        return false; 
     } else {
         document.getElementById("last-error-message").innerHTML = "";
     }
@@ -136,14 +130,13 @@ function validate() {
     } else {
         document.getElementById("birthdate-error-message").innerHTML = "";
     }
-
+    
     // 5/ Vérification de la quantité de tournois joués
     if (quantity === '') {
         document.getElementById("quantity-error-message").innerHTML = "Vous devez saisir une valeur numérique.";
         return false;
     } else {
         document.getElementById("quantity-error-message").innerHTML = "";
-
     }
 
     // 6/ Vérification du nombre de case cochée minimum pour la location
@@ -197,5 +190,4 @@ function validate() {
 
     //On retourne true pour le formulaire
     return true;
-
 }
