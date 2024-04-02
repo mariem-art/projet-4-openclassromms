@@ -187,6 +187,16 @@ main {
   padding: 15px 8%;
   margin: 15px auto;
 }
+span#confirmation-message{
+  display: flex;
+  flex-direction: column;
+  font-family: DM Sans;
+  font-weight:400 ;
+  font-size: 36px;
+  color: #FFF;
+ text-align: center;
+
+}
 
 label {
   font-family: var(--font-default);
@@ -354,7 +364,7 @@ input[data-error]::after {
   background-color: #fff;
 }
 
-/* Style the arrow inside the select element: */
+
 .select-selected:after {
   position: absolute;
   content: "";
@@ -369,7 +379,6 @@ input[data-error]::after {
   border-radius: 5px 0 5px 0;
 }
 
-/* Point the arrow upwards when the select box is open (active): */
 .select-selected.select-arrow-active:after {
   transform: rotate(135deg);
   top: 13px;
@@ -386,7 +395,6 @@ input[data-error]::after {
   height: 48px;
 }
 
-/* Style items (options): */
 .select-items {
   position: absolute;
   background-color: #fff;
@@ -396,7 +404,7 @@ input[data-error]::after {
   z-index: 99;
 }
 
-/* Hide the items when the select box is closed: */
+
 .select-hide {
   display: none;
 }
@@ -405,7 +413,7 @@ input[data-error]::after {
 .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* custom select end */
+
 .text-label {
   font-weight: normal;
   font-size: 16px;
@@ -484,6 +492,7 @@ footer {
   padding-right: 2vw;
   margin: 0 20px;
 }
+
 @media screen and (max-width: 800px) {
   .hero-section {
     display: block;
