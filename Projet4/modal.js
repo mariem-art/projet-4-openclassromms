@@ -89,7 +89,6 @@ function validate() {
     var location = formulaire.elements.location;
     var conditions = formulaire.elements.conditions.checked;
 
-
     // 1/ Vérification de la longueur minimale du nom entré de l'input first / prénom
     const firstName = /^[a-zA-ZÀ-ÖØ-öø-ÿ\s]+$/;
     if (!firstName.test(first)) {
@@ -107,7 +106,7 @@ function validate() {
     if (!lastName.test(last)) {
         document.getElementById("last-error-message").innerHTML = "Veuillez entrer un nom valide.";
         return false;
-    } else if (lastName.trim().length < 2)  {
+    } else if (last.trim().length < 2)  {
         document.getElementById("last-error-message").innerHTML = "Ce champ ne peut pas être vide.";
         return false; 
     } else {
