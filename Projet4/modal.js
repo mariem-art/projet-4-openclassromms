@@ -31,12 +31,12 @@ const formulaire = document.querySelector("#reserve");
 var confirmationMessage = document.querySelector("#confirmation-message");
 
 //Création d'une constante querySelector correspond au bouton je m'inscris
-const querySelector = document.querySelector(".modal-btn");
+const modalBtn = document.querySelectorAll(".modal-btn");
 
 //Ouverture de la modale 
 
 //Ajout de de la méthode forEach sur le bouton je m'inscris, pour chaque click sur le btn, on lance la fonction launchModal
-querySelector.addEventListener("click", launchModal);
+ modalBtn.forEach( (btn) => btn.addEventListener("click", launchModal));
 
 //Fonction launchModal display du div contenant le form à block
 function launchModal() {
